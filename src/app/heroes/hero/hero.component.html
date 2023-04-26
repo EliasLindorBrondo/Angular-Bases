@@ -1,0 +1,27 @@
+<h1 class="text-focus-in">{{name}}</h1>
+<div class="container pt-2 color-change-2x " style="align-items: center; text-align: center; border-radius: 50px;">
+
+
+<dl>
+
+  <td>Nombre:
+  </td>
+  <dd>
+    {{ Realname}}
+  </dd>
+
+  <td>Edad:
+  </td>
+  <dd>
+ {{age}}
+  </dd>
+  <td>Metodo: </td>
+  <dd> {{ getDescriptionHero() }} </dd>
+  <td> Capitalizado:  </td>
+  <dd>{{ Capitalized }}</dd>
+
+</dl>
+<button (click)="getHero()" *ngIf="name !== 'Capitan America'" class="btn btn-secondary">Cambiar nombre</button>
+<button (click)="getAge()" *ngIf="age !== 30" class="btn btn-secondary">Cambiar edad</button>
+<button (click)="Reset()" class="btn btn-secondary">Reset</button>
+</div>
